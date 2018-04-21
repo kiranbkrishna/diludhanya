@@ -19,7 +19,6 @@ def simple_upload(request):
         myfile = request.FILES['myfile']
         dest_path = settings.MEDIA_URL + str(uuid.uuid4()) + '.jpg'
         #write to tempfile
-        import pdb; pdb.set_trace()
 
         if myfile:
             fs = FileSystemStorage()
