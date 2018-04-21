@@ -11,7 +11,6 @@ def db_upload(file_path, file_name=None):
         target_path = '/dilumarriage'
         filename, file_extension = os.path.splitext(file_path)
         filename = os.sep.join([target_path, str(uuid.uuid4())])
-        import pdb; pdb.set_trace()
         target_filename = ''.join([filename, file_extension ])
         with open(file_path, 'rb') as f:
                 dbx.files_upload(f.read(), target_filename, mute=False)
